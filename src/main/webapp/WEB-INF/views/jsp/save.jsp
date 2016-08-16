@@ -1,10 +1,10 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+﻿<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
-<html lang=ru>
+<%@ page language="java" contentType="text/html;charset=utf-8"%>
+<%@ page pageEncoding="utf-8"%>
+<html xmlns="http://www.w3.org/1999/xhtml" lang=ru>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"\>
     <c:if test="${empty target.title}">
         <title>Новая задачи</title>
     </c:if>
@@ -107,16 +107,17 @@
 </head>
 <body>
 <div class="container">
-        <form:form action="/add" modelAttribute="target" method="post">
-            <form:input path="date" class ="textbox" type="date" placeholder="Выполнить до:" required="required"/>
-            <form:textarea path="title" rows="4" cols="50" accept-charset="utf-8" name="subject" type="text" placeholder="Введите задачу:" class="message" required="required"/>
-            <c:if test="${empty target.title}">
-                <input name="submit" class="button" charset="utf-8" type="submit" value="Добавить" />
-            </c:if>
-            <c:if test="${!empty target.title}">
-                <input name="submit" class="button"  type="submit" value="Редактировать" />
-            </c:if>
-        </form:form>
+    <form:form action="/add" modelAttribute="target" acceptCharset="utf-8" method="post">
+        <form:input path="date" class ="textbox" type="date" placeholder="Выполнить до:" required="required"/>
+        <form:textarea path="title" rows="4" cols="50" acceptCharset="utf-8" name="subject" type="text" placeholder="Введите задачу:" class="message" required="required"/>
+        <c:if test="${empty target.title}">
+            <input name="submit" class="button" type="submit" value="Добавить" />
+        </c:if>
+        <c:if test="${!empty target.title}">
+            <input name="submit" class="button"  type="submit" value="Редактировать" />
+        </c:if>
+    </form:form>
 </div>
 </body>
+
 </html>

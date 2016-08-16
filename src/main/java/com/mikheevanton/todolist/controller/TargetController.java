@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.*;
+import java.nio.charset.Charset;
+
 
 @Controller
 public class TargetController {
@@ -20,7 +23,6 @@ public class TargetController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printMainPage(ModelMap model) {
-
         model.addAttribute("getAll", service.getAll());
         return "main";
     }
@@ -37,6 +39,11 @@ public class TargetController {
             id=0;
         }
         target.setStatus(NOT_DONE_STATUS);
+        try {
+            target.setTitle(new String(target.getTitle().getBytes("ISO-8859-1"),"UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         service.save(target);
         return "redirect:/";
     }
