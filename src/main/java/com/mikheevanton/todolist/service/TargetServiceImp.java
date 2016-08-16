@@ -4,11 +4,9 @@ import com.mikheevanton.todolist.entity.Target;
 import com.mikheevanton.todolist.repository.TargetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 @Service

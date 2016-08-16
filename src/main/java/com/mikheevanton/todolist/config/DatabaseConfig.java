@@ -74,7 +74,7 @@ public class DatabaseConfig {
             return prop;
 
         }catch (IOException e){
-            throw new IllegalArgumentException("Can't find hib. properties");
+            throw new IllegalArgumentException("Can't find hibernate properties");
         }
     }
 }

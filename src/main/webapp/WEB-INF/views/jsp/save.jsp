@@ -36,7 +36,6 @@
             padding: 1.2em;
         }
 
-        /* Базовые стили формы */
         form{
             margin:0 auto;
             max-width:95%;
@@ -47,7 +46,6 @@
             -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
             box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
         }
-        /* Стили полей ввода */
         .textbox{
             height:50px;
             width:100%;
@@ -65,7 +63,6 @@
             border:rgba(24,149,215,1) 2px solid;
             color:rgba(24,149,215,1);
         }
-        /* Стили текстового поля */
         .message{
             background: rgba(255, 255, 255, 0.4);
             width:100%;
@@ -82,7 +79,6 @@
             margin-bottom:30px;
             overflow:hidden;
         }
-        /* Базовые стили кнопки */
         .button{
             height:50px;
             width:100%;
@@ -99,7 +95,6 @@
             transition:background .4s;
             cursor:pointer;
         }
-        /* Изменение фона кнопки при наведении */
         .button:hover{
             background:#2e6da4;
         }
